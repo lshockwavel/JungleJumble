@@ -65,10 +65,12 @@ export class Jumble {
       }
 
       get wordCount () {
-        return this.body.split(" ").length;
+
+        const words = this.body.split(" ");
+        return words.length;
       }
 
       get fastestWordsPerMinute() {
-        return this.wordCount * 60 / this.fastestTime;
+        return this.wordCount * 60 / this.fastestTime; 
       }
   }
