@@ -38,6 +38,7 @@ export class JumblesController{
         if(AppState.activeJumble != null)
         {
             activeJumbleElem.innerHTML = AppState.activeJumble.gameTemplate;
+            document.getElementById('jumble-text-input').focus()
         }
         else
         {

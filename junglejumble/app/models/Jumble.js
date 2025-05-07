@@ -74,3 +74,8 @@ export class Jumble {
         return this.wordCount * 60 / this.fastestTime; 
       }
   }
+
+
+  // var jumble = new Jumble()
+
+  // Jumble.emptyFieldTemplate

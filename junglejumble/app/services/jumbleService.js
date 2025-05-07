@@ -57,6 +57,8 @@ class JumbleService{
 
     loadJumbles()
     {
+
+        loadState('jumbles', [Jumble])
         /* REVIEW Didn't try LoadState but figured I would run into the same problem as saveState */
         // loadState('jumbles', [Jumble])
         const jumbleString = localStorage.getItem('jumbles');
@@ -70,10 +72,10 @@ class JumbleService{
     saveJumbles()
     {
         /* REVIEW Is there anything critical we should need to know about saveState? Not sure what I was doing wrong with saveState */
-        // saveState('jumbles', AppState.jumbles); 
-        const jumbles = AppState.jumbles;
-        const jumbleString = JSON.stringify(jumbles);
-        localStorage.setItem('jumbles', jumbleString);
+        saveState('jumbles', AppState.jumbles); 
+        // const jumbles = AppState.jumbles;
+        // const jumbleString = JSON.stringify(jumbles);
+        // localStorage.setItem('jumbles', jumbleString);
     }
 
     createJumble(jumbleData)
